@@ -144,6 +144,12 @@ echo ""
 echo ""
 echo ""
 
+echo "alias wl = 'wtc-lms login'" >> ~/.bashrc
+
+source ~/.bashrc
+
+echo "You can use wl to login to your lms"
+
 # Installing tweaks
 
 echo  'Installing Tweaks\n '
