@@ -160,6 +160,11 @@ read -p 'Press enter to continue' enter
 
 echo ""
 
+sudo apt install gnome-tweak-tool
+sudo add-apt-repository universe
+
+echo ""
+
 # Setup git globals
 
 echo 'Setup git globals'
