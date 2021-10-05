@@ -104,6 +104,26 @@ echo ""
 echo ""
 echo ""
 
+# Installing sqlite and sqlite3
+
+echo "Installing sqlite and sqlit3"
+
+echo ""
+
+sudo apt install sqlite3
+
+echo ""
+
+sudo apt install sqlite
+
+echo "sqlite3 version"
+
+echo ""
+
+sqlite3 --version
+
+echo ""
+
 # Installing WTC-LMS
 
 echo  'Download lms from #02_lms_releases slack channel'
