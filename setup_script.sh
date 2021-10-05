@@ -1,7 +1,7 @@
 
 #Installing brave
 
-echo 'Installing brave browser...please press enter'
+echo -e 'Installing brave browser...please press enter\n '
 
 read -p 'Press enter to continue' enter
 
@@ -17,7 +17,7 @@ sudo apt install brave-browser
 
 # Installing Slack
 
-echo 'Installing Slack'
+echo -e 'Installing Slack\n '
 
 read -p 'Press enter to continue' enter
 
@@ -25,7 +25,7 @@ sudo apt install slack-desktop
 
 # Installing discord
 
-echo 'Installing Discord'
+echo -e 'Installing Discord\n'
 
 read -p 'Press enter to continue' enter
 
@@ -43,7 +43,7 @@ source ~/.bashrc
 
 # Installing snapd
 
-echo "installing snapd for intellij"
+echo -e "installing snapd for intellij\n "
 
 read -p 'Press enter to continue' enter
 
@@ -51,7 +51,7 @@ sudo apt install snapd
 
 # Installing intellij
 
-echo "installing intellij using snap..... this will take long as its a 500mb download"
+echo -e "installing intellij using snap..... this will take long as its a 500mb download\n"
 
 read -p 'Press enter to continue' enter
 
@@ -59,7 +59,7 @@ sudo snap install intellij-idea-community --classic
 
 # Installing MariaDB
 
-echo "Installing mariaDB"
+echo -e "Installing mariaDB\n"
 
 read -p 'Press enter to continue' enter
 
@@ -69,7 +69,7 @@ sudo apt install mariadb-server-core-10.5
 
 # Installing WTC-LMS
 
-echo 'Download lms from #02_lms_releases slack channel'
+echo -e 'Download lms from #02_lms_releases slack channel\n'
 
 read -p 'Press enter when the download is done' enter
 
@@ -83,7 +83,7 @@ echo "export PATH=$PATH:~/bin" >> ~/.bashrc
 
 source ~/.bashrc
 
-echo "Here are answers to the following questions\n"
+echo -e "Here are answers to the following questions\n "
 
 read -p 'Press enter to continue' enter
 
@@ -97,9 +97,15 @@ echo "Keycloak URL: 'https://keycloak.wethinkcode.co.za'"
 
 wtc-lms -V
 
+# Installing tweaks
+
+echo -e 'Installing Tweaks\n '
+
+read -p 'Press enter to continue' enter
+
 # Updating before reboot
 
-echo "Updating"
+echo -e "Updating\n "
 
 read -p 'Press enter to continue' enter
 
@@ -112,6 +118,9 @@ sudo apt upgrade
 echo "Rebooting"
 
 read -p 'Press enter to continue' enter
+
+
+
 
 
 
