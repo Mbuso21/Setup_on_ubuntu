@@ -1,4 +1,5 @@
 
+
 #Installing brave
 
 echo 'Installing brave browser...please press enter '
@@ -165,7 +166,7 @@ read -p 'Please enter yout email: ' gitGlobalEmail
 git config --global user.name $gitGlobalUsername
 git config --global user.email $gitGlobalEmail
 
-echo "Here is your git globals:"
+echo "Here are your git globals:"
 echo ""
 
 cat ~/.gitconfig
