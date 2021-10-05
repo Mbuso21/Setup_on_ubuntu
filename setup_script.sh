@@ -144,7 +144,7 @@ echo ""
 echo ""
 echo ""
 
-echo "alias wl = 'wtc-lms login'" >> ~/.bashrc
+echo "alias wl='wtc-lms login'" >> ~/.bashrc
 
 source ~/.bashrc
 
