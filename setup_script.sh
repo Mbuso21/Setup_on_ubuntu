@@ -202,6 +202,10 @@ echo "Rebooting"
 
 read -p 'Press enter to continue' enter
 
+echo ""
+
+reboot
+
 
 
 
