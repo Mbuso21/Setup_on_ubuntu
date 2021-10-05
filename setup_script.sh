@@ -165,6 +165,16 @@ sudo add-apt-repository universe
 
 echo ""
 
+# Installing xclip
+
+echo "Installing xclip"
+
+echo ""
+
+sudo apt install xclip
+
+echo ""
+
 # Setup git globals
 
 echo 'Setup git globals'
@@ -184,6 +194,77 @@ cat ~/.gitconfig
 
 echo ""
 echo ""
+echo ""
+
+# Setup SSH
+
+echo "Setting up SSH"
+
+echo ""
+
+read -p "Please enter your GitLab or GitHub email: " gitEmail
+
+ssh-keygen -t ed25519 -C $gitEmail
+
+echo ""
+
+xclip -sel clip < ~/.ssh/id_ed25519.pub
+
+echo "Gitlab will open via your browser"
+echo "Login to it using your WTC gmail credentials"
+echo ""
+echo "Please paste on the ADD SSH in your gitlab"
+echo ""
+echo ""
+
+echo "Please open https://gitlab.wethinkco.de on your browser"
+
+echo ""
+
+read -p "Press enter once you've Added your SSH KEY" key
+
+ssh -T git@gitlab.wethinkcode.de
+
+echo ""
+
+echo "If there is a problem, you will have to do the process manually"
+
+echo ""
+
+read -p "Press enter to proceed" enter
+
+echo ""
+
+# Generate a GPG KEY
+
+echo "Generating a GPG KEY"
+
+echo ""
+
+echo "You can follow the steps needed by opening https://gitlab.wethinkco.de/help/user/project/repository/gpg_signed_commits/index.md in your browser"
+
+echo ""
+
+echo "Are you ready to proceed?"
+
+echo ""
+
+read -p "Press ENTER to proceed" enter
+
+gpg --full-gen-key
+
+echo ""
+
+gpg --list-secret-keys --keyid-format LONG $gitEmail
+
+echo ""
+
+gpg --list-secret-keys --keyid-format LONG mmehloma@student.wethinkcode.co.za | grep sec
+
+read -p "Press Enter when done" enter
+
+git config --global commit.gpgsign true
+
 echo ""
 
 # Updating before reboot
