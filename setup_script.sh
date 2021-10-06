@@ -285,6 +285,18 @@ echo ""
 
 gpg --list-secret-keys --keyid-format LONG mmehloma@student.wethinkcode.co.za | grep sec
 
+echo ""
+
+read -p "Please copy your sec and paste it here: " sec
+
+echo ""
+
+gpg --armor --export sec
+
+echo ""
+
+git config --global user.signingkey sec
+
 read -p "Press Enter when done" enter
 
 git config --global commit.gpgsign true
