@@ -279,11 +279,7 @@ gpg --full-gen-key
 
 echo ""
 
-gpg --list-secret-keys --keyid-format LONG $gitEmail
-
-echo ""
-
-gpg --list-secret-keys --keyid-format LONG mmehloma@student.wethinkcode.co.za | grep sec
+gpg --list-secret-keys --keyid-format LONG gitemail | grep sec
 
 echo ""
 
