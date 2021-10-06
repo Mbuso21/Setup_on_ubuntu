@@ -18,6 +18,8 @@ sudo apt update
 
 sudo apt install brave-browser
 
+echo ""
+
 # Installing Slack
 
 echo  'Installing Slack '
@@ -27,6 +29,8 @@ echo ""
 read -p 'Press enter to continue' enter
 
 sudo apt install slack-desktop
+
+echo ""
 
 # Installing discord
 
