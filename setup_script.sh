@@ -1,4 +1,4 @@
-
+#!/bin/bash
 
 #Installing brave
 
@@ -52,11 +52,6 @@ echo ""
 echo ""
 echo ""
 
-#Adding clear alias
-
-echo "alias c='clear'" >> ~/.bashrc
-
-source ~/.bashrc
 
 # Installing snapd
 
@@ -88,6 +83,16 @@ sudo snap install intellij-idea-community --classic
 
 echo ""
 echo ""
+echo ""
+
+# Installing maven
+
+echo "Installing maven"
+
+echo ""
+
+sudo apt install maven
+
 echo ""
 
 # Installing MariaDB
@@ -146,8 +151,6 @@ chmod +x ~/bin/wtc-lms
 
 echo "export PATH=$PATH:~/bin" >> ~/.bashrc
 
-source ~/.bashrc
-
 echo  "Here are answers to the following questions\n "
 
 read -p 'Press enter to continue' enter
@@ -170,8 +173,6 @@ echo ""
 
 echo "alias wl='wtc-lms login'" >> ~/.bashrc
 
-source ~/.bashrc
-
 echo "You can use wl to login to your lms"
 
 # Installing tweaks
@@ -180,7 +181,7 @@ echo  'Installing Tweaks\n '
 
 echo ""
 
-read -p 'Press enter to continue' enter
+read -p 'Press enter to continue:' enter
 
 echo ""
 
@@ -226,28 +227,33 @@ echo "Setting up SSH"
 
 echo ""
 
-read -p "Please enter your GitLab or GitHub email: " gitEmail
 
-ssh-keygen -t ed25519 -C $gitEmail
+ssh-keygen -t ed25519 -C $gitGlobalEmail
 
 echo ""
 
 xclip -sel clip < ~/.ssh/id_ed25519.pub
 
+echo "Please open https://gitlab.wethinkco.de on your browser"
+
+echo ""
+
 echo "Gitlab will open via your browser"
 echo "Login to it using your WTC gmail credentials"
+
+echo ""
+
 echo ""
 echo "Please paste on the ADD SSH in your gitlab"
 echo ""
 echo ""
 
-echo "Please open https://gitlab.wethinkco.de on your browser"
 
 echo ""
 
 read -p "Press enter once you've Added your SSH KEY" key
 
-ssh -T git@gitlab.wethinkcode.de
+ssh -T git@gitlab.wethinkco.de
 
 echo ""
 
@@ -279,7 +285,7 @@ gpg --full-gen-key
 
 echo ""
 
-gpg --list-secret-keys --keyid-format LONG gitemail | grep sec
+gpg --list-secret-keys --keyid-format LONG $gitGlobalEmail | grep sec
 
 echo ""
 
@@ -287,11 +293,11 @@ read -p "Please copy your sec and paste it here: " sec
 
 echo ""
 
-gpg --armor --export sec
+gpg --armor --export $sec
 
 echo ""
 
-git config --global user.signingkey sec
+git config --global user.signingkey $sec
 
 read -p "Press Enter when done" enter
 
@@ -309,11 +315,14 @@ sudo apt update
 
 sudo apt upgrade
 
+echo ""
+echo ""
+
 # Reboot
 
 echo "Rebooting"
 
-read -p 'Press enter to continue' enter
+sleep 5
 
 echo ""
 
