@@ -1,12 +1,15 @@
 #!/bin/bash
 
+# Installing git
+
+sudo ap install git
+
 #Installing brave
 
 echo 'Installing brave browser...please press enter '
 
 echo ""
 
-read -p 'Press enter to continue' enter
 
 sudo apt install apt-transport-https curl
 
@@ -20,15 +23,21 @@ sudo apt install brave-browser
 
 echo ""
 
+# Install Teams
+
+wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.16851_amd64.deb
+
+sudo dpkg -i teams_1.3.00.16851_amd64.deb
+
 # Installing Slack
 
 echo  'Installing Slack '
 
 echo ""
 
-read -p 'Press enter to continue' enter
+wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.0.2-amd64.deb
 
-sudo apt install slack-desktop
+sudo apt install ./slack-desktop-*.deb
 
 echo ""
 
@@ -79,7 +88,7 @@ read -p 'Press enter to continue' enter
 
 echo ""
 
-sudo snap install intellij-idea-community --classic
+sudo snap install intellij-idea-ultimate --classic
 
 echo ""
 echo ""
@@ -94,6 +103,10 @@ echo ""
 sudo apt install maven
 
 echo ""
+
+# Install gradle
+
+sudo apt install gradle
 
 # Installing MariaDB
 
@@ -112,68 +125,6 @@ sudo apt install mariadb-server-core-10.5
 echo ""
 echo ""
 echo ""
-
-# Installing sqlite and sqlite3
-
-echo "Installing sqlite and sqlit3"
-
-echo ""
-
-sudo apt install sqlite3
-
-echo ""
-
-sudo apt install sqlite
-
-echo "sqlite3 version"
-
-echo ""
-
-sqlite3 --version
-
-echo ""
-
-# Installing WTC-LMS
-
-echo  'Download lms from #02_lms_releases slack channel'
-
-echo ""
-
-read -p 'Press enter when the download is done' enter
-
-echo ""
-
-mkdir -p ~/bin
-
-mv ~/Downloads/wtc-lms ~/bin
-
-chmod +x ~/bin/wtc-lms
-
-echo "export PATH=$PATH:~/bin" >> ~/.bashrc
-
-echo  "Here are answers to the following questions\n "
-
-read -p 'Press enter to continue' enter
-
-echo ""
-
-echo "Repo directory: '~/problems'"
-echo "Navigator URL: 'https://navigator.wethinkcode.co.za'"
-echo "Username: Your WTC_ student email address, e.g. 'jdoe@student.wethinkcode.co.za'"
-echo "Review manager URL: 'https://review-manager.wethinkcode.co.za'"
-echo "Keycloak URL: 'https://keycloak.wethinkcode.co.za'"
-
-echo ""
-
-wtc-lms -V
-
-echo ""
-echo ""
-echo ""
-
-echo "alias wl='wtc-lms login'" >> ~/.bashrc
-
-echo "You can use wl to login to your lms"
 
 # Installing tweaks
 
