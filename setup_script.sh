@@ -47,8 +47,6 @@ echo  'Installing Discord\n'
 
 echo ""
 
-read -p 'Press enter to continue' enter
-
 echo ""
 
 sudo apt install gdebi-core wget
@@ -68,8 +66,6 @@ echo  "installing snapd for intellij "
 
 echo ""
 
-read -p 'Press enter to continue' enter
-
 echo ""
 
 sudo apt install snapd
@@ -83,8 +79,6 @@ echo ""
 echo  "installing intellij using snap..... this will take long as its a 500mb download"
 
 echo ""
-
-read -p 'Press enter to continue' enter
 
 echo ""
 
@@ -108,31 +102,11 @@ echo ""
 
 sudo apt install gradle
 
-# Installing MariaDB
-
-echo  "Installing mariaDB\n"
-
-echo ""
-
-read -p 'Press enter to continue' enter
-
-echo ""
-
-sudo apt install mariadb-client-core-10.5
-
-sudo apt install mariadb-server-core-10.5
-
-echo ""
-echo ""
-echo ""
-
 # Installing tweaks
 
 echo  'Installing Tweaks\n '
 
 echo ""
-
-read -p 'Press enter to continue:' enter
 
 echo ""
 
@@ -259,8 +233,6 @@ echo ""
 # Updating before reboot
 
 echo  "Updating "
-
-read -p 'Press enter to continue' enter
 
 sudo apt update
 
