@@ -83,7 +83,7 @@ echo ""
 echo ""
 echo ""
 
-# Installing intellij
+# Installing intellij from snap
 
 echo  "installing intellij using snap..... this will take long as its a 500mb download"
 
@@ -96,6 +96,10 @@ sudo snap install -y intellij-idea-ultimate --classic
 echo ""
 echo ""
 echo ""
+
+# Installing postman from snap
+
+sudo snap install -y postman
 
 # Installing maven
 
@@ -123,19 +127,6 @@ sudo apt  install -y gnome-tweak-tool
 sudo add-apt-repository universe
 
 echo ""
-
-# Installing xclip
-
-echo "Installing xclip"
-
-echo ""
-
-sudo apt install -y xclip
-
-echo ""
-
-echo ""
-
 
 # Updating before reboot
 
