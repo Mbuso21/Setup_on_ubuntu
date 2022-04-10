@@ -47,26 +47,15 @@ wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.0.2-amd64.d
 
 sudo apt -y install ./slack-desktop-*.deb
 
+# Install MySQL
 
-echo ""
+sudo apt install -y mysql-server
 
-# Installing discord
+sudo service mysql start
 
-echo  'Installing Discord\n'
+sudo mysql_secure_installation
 
-echo ""
-
-echo ""
-
-sudo apt install gdebi-core wget
-
-wget -O ~/discord.deb "https://discordapp.com/api/download?platform=linux&format=deb"
-
-sudo gdebi -y ~/discord.deb
-
-echo ""
-echo ""
-echo ""
+sudo mysql -u root
 
 
 # Installing snapd
