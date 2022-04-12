@@ -33,9 +33,11 @@ echo ""
 
 # Install Teams
 
-wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.3.00.16851_amd64.deb
+wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.4.00.7556_amd64.deb 
 
-sudo dpkg -i teams_1.3.00.16851_amd64.deb
+sudo dpkg -i teams_1.4.00.7556_amd64.deb 
+
+rm *.deb
 
 # Installing Slack
 
