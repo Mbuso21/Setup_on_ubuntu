@@ -31,13 +31,15 @@ sudo apt install -y brave-browser
 
 echo ""
 
-# Install Teams
+# Install Teams latest release
 
-wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.4.00.7556_amd64.deb 
+curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
-sudo dpkg -i teams_1.4.00.7556_amd64.deb 
+sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod
 
-rm *.deb
+sudo apt-get -y update
+
+sudo apt install teams
 
 # Installing Slack
 
