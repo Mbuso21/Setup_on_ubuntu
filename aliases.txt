@@ -1,14 +1,1 @@
-alias c='clear'
-alias wl='wtc-lms login'
-alias gitc='sh ~/git_script.sh'
-alias sb='source ~/.bashrc'
-alias cb='cat ~/.bashrc'
-alias gc='code ~/git_script.sh'
-alias uss='cd ~/uss-newton/'
-
-alias wcurr='wtc-lms current_iteration'
-alias wcom='wtc-lms complete_iteration'
-alias wstass='wtc-lms start_assessment'
-alias wsub='wtc-lms submit_assessment'
-alias wm='wtc-lms modules'
-alias wh='wtc-lms history'
+will add some

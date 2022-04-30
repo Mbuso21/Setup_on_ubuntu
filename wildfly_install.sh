@@ -21,7 +21,7 @@ sudo useradd -r -g wildfly -d /opt/wildfly -s /sbin/nologin wildfly
 
 # Download the WildFly archive in the /tmp directory using the following wget command:
 
-WILDFLY_VERSION=16.0.0.Final
+WILDFLY_VERSION=10.0.0.Final
 
 wget https://download.jboss.org/wildfly/$WILDFLY_VERSION/wildfly-$WILDFLY_VERSION.tar.gz -P /tmp
 
