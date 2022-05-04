@@ -108,3 +108,4 @@ sudo /opt/wildfly/bin/add-user.sh
 
 # Step 7: Access WildFly Administration Console 
 
+# THis part is still in process
