@@ -14,7 +14,7 @@ sudo apt -y install git
 
 #Installing brave
 
-echo 'Installing brave browser...please press enter '
+echo 'Installing brave browser.. '
 
 echo ""
 
@@ -41,15 +41,6 @@ sudo apt-get -y update
 
 sudo apt install teams
 
-# Installing Slack
-
-echo  'Installing Slack '
-
-echo ""
-
-wget https://downloads.slack-edge.com/linux_releases/slack-desktop-4.0.2-amd64.deb
-
-sudo apt -y install ./slack-desktop-*.deb
 
 # Install MySQL
 
