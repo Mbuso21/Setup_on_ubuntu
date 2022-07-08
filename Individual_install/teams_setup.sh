@@ -2,10 +2,10 @@
 
 # Install Teams
 
-cd
+curl -sSL https://packages.microsoft.com/keys/microsoft.asc | sudo tee /etc/apt/trusted.gpg.d/microsoft.asc
 
-wget https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_1.4.00.26453_amd64.deb
+sudo apt-add-repository https://packages.microsoft.com/ubuntu/20.04/prod
 
-sudo dpkg -i teams_1.4.00.26453_amd64.deb 
+sudo apt-get -y update
 
-rm *.deb
+sudo apt install teams

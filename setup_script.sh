@@ -42,16 +42,6 @@ sudo apt-get -y update
 sudo apt install teams
 
 
-# Install MySQL
-
-sudo apt install -y mysql-server
-
-sudo service mysql start
-
-sudo mysql_secure_installation
-
-sudo mysql -u root
-
 
 # Installing snapd
 
