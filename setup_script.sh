@@ -61,9 +61,24 @@ echo ""
 echo ""
 echo ""
 
-# Installing postman from snap
+# Installing postman
 
-sudo snap install -y postman
+BIT=$(getconf LONG_BIT)
+
+wget -O ~/postman.tar.gz "https://dl.pstmn.io/download/latest/linux${BIT}"
+
+sudo tar xvf ~/postman.tar.gz -C /opt/
+
+rm ~/postman.tar.gz
+
+echo "[Desktop Entry]
+Encoding=UTF-8
+Name=Postman
+Exec=/opt/Postman/app/Postman %U
+Icon=/opt/Postman/app/resources/app/assets/icon.png
+Terminal=false
+Type=Application
+Categories=Development;" >> ~/.local/share/applications/Postman.desktop
 
 # Installing maven
 
