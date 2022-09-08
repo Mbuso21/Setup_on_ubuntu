@@ -43,29 +43,19 @@ sudo apt install teams
 
 
 
-# Installing snapd
 
-echo  "installing snapd for intellij "
+# Installing intellij
 
-echo ""
-
-echo ""
-
-sudo apt install -y snapd
-
-echo ""
-echo ""
-echo ""
-
-# Installing intellij from snap
-
-echo  "installing intellij using snap..... this will take long as its a 500mb download"
+echo  "installing intellij..... this will take long as its a 900mb download"
 
 echo ""
 
 echo ""
 
-sudo snap install -y intellij-idea-ultimate --classic
+sudo apt install vim apt-transport-https curl wget software-properties-common
+sudo add-apt-repository ppa:mmk2410/intellij-idea -y
+sudo apt install intellij-idea-ultimate -y
+
 
 echo ""
 echo ""
