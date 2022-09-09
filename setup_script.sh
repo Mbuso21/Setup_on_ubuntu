@@ -103,7 +103,7 @@ echo ""
 echo ""
 
 sudo apt  install -y gnome-tweak-tool
-sudo add-apt-repository universe
+sudo add-apt-repository universe -y
 
 echo ""
 
